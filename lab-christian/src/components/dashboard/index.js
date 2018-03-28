@@ -33,6 +33,7 @@ class Dashboard extends React.Component {
 const mapStateToProps = state => {
   return {
     categories: state,
+    expenses: state,
   };
 };
 

@@ -3,9 +3,15 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import CategoryForm from '../category-form';
+import ExpenseForm from '../expense-form';
 import {categoryUpdate, categoryDelete} from '../../action/category';
+import {expenseCreate} from '../../action/expense';
 
 class CategoryItem extends React.Component {
+  renderExpenseItems() {
+
+  }
+
   render() {
     let {category, categoryUpdate, categoryDelete} = this.props;
 
@@ -18,9 +24,15 @@ class CategoryItem extends React.Component {
           </div>
           <div className='edit'>
             <CategoryForm
-              buttonText='update'
+              buttonText='Update'
               category={category}
               onComplete={categoryUpdate} />
+          </div>
+          <div>
+            <ExpenseForm
+              buttonText='Create'
+              categoryID={category.ID}
+              onComplete={expenseCreate} />
           </div>
         </div>
       </section>
