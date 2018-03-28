@@ -1,10 +1,11 @@
 'use strict';
 
 import React from 'react';
-import {connect} from 'redux';
+import {connect} from 'react-redux';
 
 import { categoryCreate, categoryUpdate, categoryDelete } from '../../action/category';
 import CategoryForm from '../category-form';
+import CategoryItem from '../category-item/index';
 
 class Dashboard extends React.Component {
   render() {
@@ -26,20 +27,21 @@ class Dashboard extends React.Component {
       </main>
     );
   }
-
-  const mapStateToProps = state => {
-    return {
-      categories: state
-    }
-  }
-
-  const mapDispatchToProps = (dispatch, getState) => {
-    return {
-      categoryCreate: category => dispatch(categoryCreate(category)),
-      categoryCreate: category => dispatch(categoryCreate(category)),
-      categoryCreate: category => dispatch(categoryCreate(category)),
-    }
-  }
 }
+
+
+const mapStateToProps = state => {
+  return {
+    categories: state,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    categoryCreate: category => dispatch(categoryCreate(category)),
+    categoryUpdate: category => dispatch(categoryUpdate(category)),
+    categoryDelete: category => dispatch(categoryDelete(category)),
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
