@@ -31,5 +31,9 @@
     "linebreak-style": ["error", "unix"],
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error"
-  }
+  },
+  "ecmaFeatures": {
+    "jsx": true,
+    "experimentalObjectRestSpread": true
+  }  
 }
