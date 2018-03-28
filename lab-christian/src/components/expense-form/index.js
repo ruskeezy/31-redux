@@ -16,7 +16,7 @@ class ExpenseForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.onComplete(Object.assign({}, this.state));
+    this.props.onComplete(Object.assign({}, {...this.state, categoryID: this.props.categoryID}));
   }
 
   render() {

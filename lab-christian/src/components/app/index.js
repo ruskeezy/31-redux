@@ -11,7 +11,7 @@ const store = CreateAppStore();
 class App extends React.Component {
   componentDidMount() {
     store.subscribe(() => {
-      console.log('__STATE', store.getState());
+      console.log('__STATE__', store.getState());
     });
 
     store.dispatch({ type: null });

@@ -3,7 +3,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import ExpenseForm from '../category-form';
-import {expenseUpdate, expenseDelete} from '../../action/expense';
+import {expenseCreate, expenseUpdate, expenseDelete} from '../../action/expense';
 
 class ExpenseItem extends React.Component {
   render() {
@@ -29,8 +29,9 @@ class ExpenseItem extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  categoryUpdate: category => dispatch(expenseUpdate(category)),
-  categoryDelete: category => dispatch(expenseDelete(category)),
+  expenseCreate: expense => dispatch(expenseCreate(expense)),
+  expenseUpdate: expense => dispatch(expenseUpdate(expense)),
+  expenseDelete: expense => dispatch(expenseDelete(expense)),
 });
 
 export default connect(null, mapDispatchToProps)(ExpenseItem);
