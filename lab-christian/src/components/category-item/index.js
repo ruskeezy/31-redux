@@ -36,7 +36,7 @@ class CategoryItem extends React.Component {
           <div>
             <ExpenseForm
               buttonText='Create'
-              categoryID={category.ID}
+              categoryID={category.id}
               onComplete={expenseCreate} />
           </div>
         </div>
