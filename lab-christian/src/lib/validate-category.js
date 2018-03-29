@@ -14,7 +14,7 @@ const validateCategory = store => next => action => {
         return next(action);
       }
     } catch (err) {
-      console.err(err);
+      console.error(err);
     }
   } else {
     return next(action);

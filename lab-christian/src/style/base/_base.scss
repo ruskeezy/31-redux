@@ -1,0 +1,28 @@
+button {
+  border: none;
+  background: #444;
+  color: $white;
+  border-radius: $radius;
+  font-size: $font-sm;
+  padding: $btn-pad;
+  text-transform: lowercase;
+}
+
+input[type="text"], input[type="email"], input[type="number"] {
+  display: block;
+  float: left;
+  padding: 1vw 2vw;
+  border: solid 1px black;
+  width: 50%;
+  margin-right: $gutter-sm;
+  font-size: $font-sm;
+  margin-bottom: $gutter-sm;
+}
+
+h1 {
+  padding: 1vw 1vw;
+  margin-bottom: $gutter-sm;
+  background: $black;
+  color: $white;
+  font-size: $font-lg;
+}
