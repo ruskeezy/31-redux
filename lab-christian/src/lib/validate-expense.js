@@ -9,7 +9,7 @@ const validateExpense = store => next => action => {
       const expense = action.payload;
       const notValidated = !expense.id || !expense.name || !expense.budget;
       if (notValidated) {
-        throw new Error('VALIDATION ERROR: expense must include id, title, and timestamp');
+        throw new Error('VALIDATION ERROR: expense must include id, name, and budget');
       } else {
         return next(action);
       }
