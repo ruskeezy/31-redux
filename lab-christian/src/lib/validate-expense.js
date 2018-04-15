@@ -7,9 +7,9 @@ const validateExpense = store => next => action => {
   if(isExpense) {
     try {
       const expense = action.payload;
-      const notValidated = !expense.id || !expense.name || !expense.budget;
+      const notValidated = !expense.id || !expense.name || !expense.price;
       if (notValidated) {
-        throw new Error('VALIDATION ERROR: expense must include id, name, and budget');
+        throw new Error('VALIDATION ERROR: expense must include id, name, and price');
       } else {
         return next(action);
       }
