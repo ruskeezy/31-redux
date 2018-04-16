@@ -24,3 +24,9 @@
 * **src/style/layout**
 * **src/style/lib**
 * **src/style/module**
+
+## Installation
+* Clone down this repository and `cd` to navigate to the directory
+* Run `npm i` to install all dependencies related to the app
+* Run `npm run watch` to serve up a localhost instance with webpack
+* Go to `localhost:8080` to see the local website
