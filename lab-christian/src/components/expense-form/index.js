@@ -31,7 +31,7 @@ class ExpenseForm extends React.Component {
 
         <input 
           name='price'
-          type='text'
+          type='number'
           placeholder='price'
           value={this.state.price}
           onChange={this.handleChange} />
